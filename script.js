@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const terminalCode = `
 <span class="comment">// Architecting a scalable system</span>
 <span class="keyword">class</span> <span class="class-name">SoftwareEngineer</span> {
-  <span class="keyword">public</span> <span class="property">$name</span> = <span class="string">"Abd Alrahman Hmadi"</span>;
+  <span class="keyword">public</span> <span class="property">$name</span> = <span class="string">"Abdulrahman Al-Hammadi"</span>;
   <span class="keyword">public</span> <span class="property">$motto</span> = <span class="string">"Read Logs, Don't Guess"</span>;
 
   <span class="keyword">public function</span> <span class="class-name">buildSystem</span>() {

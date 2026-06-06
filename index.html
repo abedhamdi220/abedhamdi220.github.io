@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://abedhamdi220.github.io/preview.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:title" content="Abdulrahman Al-Hammadi | Portfolio | Backend Developer">
     <meta property="og:description" content="Explore system architecture, microservices projects, and AI applications.">
     <title>Abdulrahman Al-Hammadi | Backend Developer & Software Engineer</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
@@ -22,146 +18,147 @@
     <div class="particles-bg"></div>
 
     <div class="container">
-        <nav>
+        <nav id="navbar">
             <a href="#" class="logo">&lt;<span>Abdulrahman</span>/&gt;</a>
             <ul class="nav-links">
                 <li><a href="#about">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Architectural Projects</a></li>
-                <li><a href="#achievements">Education & Achievements</a></li>
+                <li><a href="#skills">Arsenal</a></li>
+                <li><a href="#projects">Architecture</a></li>
+                <li><a href="#achievements">Journey</a></li>
             </ul>
         </nav>
 
         <section class="hero" id="about">
             <div class="hero-content">
                 <div class="hero-text" data-aos="fade-up">
-                    <img src="1.jpg" alt="Abdulrahman Alhmadi" class="profile-pic">
+                    <div class="profile-glow">
+                        <img src="1.jpg" alt="Abdulrahman Al-Hammadi" class="profile-pic">
+                    </div>
                     
                     <h2>Informatics Student | Backend Developer</h2>
-                    <h1>I build <span>robust systems</span>, not just code</h1>
-                    <p>I believe programming is engineering and problem-solving. I transitioned from "as long as the code works" to building scalable, deeply secured microservices systems, relying on architectural design patterns using Laravel and React.</p>
+                    <h1>I build <span>robust systems</span>, <br>not just code.</h1>
+                    <p>I believe programming is engineering and problem-solving. I build scalable, deeply secured microservices systems, relying on architectural design patterns with Laravel and React.</p>
                     
                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">Browse Systems</a>
-                        
-                        <a href="ABDULRAHMAN AL-HAMMADI - Resume - CV.pdf" download="ABDULRAHMAN AL-HAMMADI - Resume - CV.pdf" target="_blank" class="btn btn-outline">
-                            <i class="fa-solid fa-download"></i> Download CV
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-server"></i> Browse Systems
+                        </a>
+                        <a href="ABDULRAHMAN AL-HAMMADI - Resume - CV.pdf" download target="_blank" class="btn btn-outline">
+                            <i class="fa-solid fa-download"></i> Get Resume
                         </a>
                     </div>
                 </div>
                 
-                <div class="terminal" data-aos="fade-right" data-tilt data-tilt-max="10" data-tilt-speed="400">
-                    <div class="terminal-header">
-                        <div class="dot red"></div>
-                        <div class="dot yellow"></div>
-                        <div class="dot green"></div>
-                    </div>
-                    <div class="terminal-body">
-                        <span class="code-comment">// Architecting a scalable system</span><br>
-                        <span class="code-keyword">class</span> <span class="code-func">SoftwareEngineer</span> {<br>
-                        &nbsp;&nbsp;<span class="code-keyword">public</span> $name = <span class="code-string">"Abdulrahman Al-Hammadi"</span>;<br>
-                        &nbsp;&nbsp;<span class="code-keyword">public</span> $motto = <span class="code-string">"Read Logs, Don't Guess"</span>;<br><br>
-                        &nbsp;&nbsp;<span class="code-keyword">public function</span> <span class="code-func">buildSystem</span>() {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;return <span class="code-keyword">new</span> MicroserviceArchitecture([<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Backend'</span>  => <span class="code-string">'Laravel / RESTful APIs'</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Frontend'</span> => <span class="code-string">'React SPA'</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Database'</span> => <span class="code-string">'MongoDB / Relational'</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'AI'</span>       => <span class="code-string">'Python / FastAPI'</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;]);<br>
-                        &nbsp;&nbsp;}<br>
-                        }
+                <div class="terminal-wrapper" data-aos="fade-left" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                            <span class="terminal-title">bash - architect.sh</span>
+                        </div>
+                        <div class="terminal-body" id="typewriter">
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills">
-            <h2 class="section-title" data-aos="fade-up">Technical & Engineering Arsenal</h2>
+            <h2 class="section-title" data-aos="fade-up">Technical Arsenal</h2>
             <div class="skills-grid">
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fa-brands fa-laravel skill-icon"></i>
-                    <h3>Backend Development</h3>
+                    <h3>Backend Engineering</h3>
                     <div class="skill-tags">
-                        <span>Laravel</span><span>PHP</span><span>RESTful APIs</span><span>System Deployment (Basic)</span>
+                        <span>Laravel</span><span>PHP</span><span>RESTful APIs</span><span>Repository Pattern</span>
                     </div>
                 </div>
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fa-solid fa-sitemap skill-icon"></i>
-                    <h3>Software Engineering</h3>
+                    <h3>Architecture & DevOps</h3>
                     <div class="skill-tags">
-                        <span>Microservices</span><span>Design Patterns</span><span>Debugging</span><span>Git & GitHub</span>
+                        <span>Microservices</span><span>Service Layers</span><span>Event-Driven</span><span>Git</span>
                     </div>
                 </div>
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fa-solid fa-database skill-icon"></i>
-                    <h3>Databases & Integration</h3>
+                    <h3>Data & Integration</h3>
                     <div class="skill-tags">
-                        <span>MySQL</span><span>MongoDB (Basic)</span><span>Python / FastAPI</span><span>Firebase (Basic)</span>
+                        <span>MySQL</span><span>MongoDB</span><span>Python / FastAPI</span><span>AI Integrations</span>
                     </div>
                 </div>
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fa-solid fa-code skill-icon"></i>
-                    <h3>Frontend Development</h3>
+                    <i class="fa-brands fa-react skill-icon"></i>
+                    <h3>Frontend Interfaces</h3>
                     <div class="skill-tags">
-                        <span>React.js (Basic)</span><span>HTML5</span><span>CSS</span><span>Bootstrap</span>
+                        <span>React.js (SPA)</span><span>HTML5 / CSS3</span><span>Bootstrap</span><span>Responsive UI</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2 class="section-title" data-aos="fade-up">Built Systems (Architecture & Challenges)</h2>
-            <div class="project-card" data-aos="fade-up">
+            <h2 class="section-title" data-aos="fade-up">Built Systems</h2>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-header">
                     <div class="project-title">
-                        <h3>Styloraify Platform | AI-Integrated E-Commerce System</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 15px;">A system based on Microservices Architecture.</p>
+                        <h3>Styloraify Platform</h3>
+                        <p class="project-subtitle">AI-Integrated Microservices E-Commerce System</p>
                     </div>
-                    <a href="https://styloraify.com/" target="_blank" class="project-link"><i class="fa-solid fa-link"></i> styloraify.com</a>
+                    <a href="https://styloraify.com/" target="_blank" class="project-link">Live System <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <h4>Architectural Challenges & Solutions:</h4>
-                <ul class="challenge-list">
-                    <li><strong>Laravel Integration with MongoDB:</strong> Overcame caching issues and configured the system to read the cloud link efficiently.</li>
-                    <li><strong>Authentication Engineering (JWT):</strong> Resolved server crashes caused by ID mismatches through careful log tracking and rebuilding the data model.</li>
-                    <li><strong>AI Service Deployment:</strong> Independently integrated the source code of a custom Python/FastAPI library into the project.</li>
-                </ul>
+                <div class="project-content">
+                    <h4>Architectural Solutions:</h4>
+                    <ul class="challenge-list">
+                        <li><strong>Laravel & MongoDB:</strong> Engineered seamless connection bridging relational logic with NoSQL flexibility.</li>
+                        <li><strong>Authentication Engineering:</strong> Implemented robust JWT tokenization, resolving cross-server ID mismatches.</li>
+                        <li><strong>FastAPI Microservice:</strong> Independently integrated a custom Python AI library via API bridging.</li>
+                    </ul>
+                </div>
                 <div class="tech-stack">
                     <span>Laravel</span><span>React</span><span>MongoDB</span><span>Python</span><span>FastAPI</span>
                 </div>
             </div>
-            
-            <div class="project-card" data-aos="fade-up">
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-header">
                     <div class="project-title">
-                        <h3>Advanced E-Commerce System | From "Working Code" to "Engineering System"</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 15px;">Practical application of software engineering concepts to build a secure, scalable, and maintainable system.</p>
+                        <h3>Kandura</h3>
+                        <p class="project-subtitle">Traditional Emirati E-Commerce Platform</p>
                     </div>
+                    <a href="#" class="project-link disabled-link"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
-                <h4>Key Engineering Applications:</h4>
-                <ul class="challenge-list">
-                    <li><strong>Flexible Payment Gateway Management:</strong> Replaced complex conditionals by implementing the <em>Strategy Pattern</em>.</li>
-                    <li><strong>Granular Permissions:</strong> Designed an in-depth permission system that separates administrative roles.</li>
-                    <li><strong>Separation of Concerns (Event-Driven Architecture):</strong> Utilized Events and Listeners to process updates instantly.</li>
-                </ul>
+                <div class="project-content">
+                    <h4>Architectural Solutions:</h4>
+                    <ul class="challenge-list">
+                        <li><strong>Localization:</strong> Engineered a robust multi-language support system with localized dashboards.</li>
+                        <li><strong>Security & Access:</strong> Implemented complex Role-Based Access Control (RBAC) utilizing database seeders and migrations.</li>
+                        <li><strong>Clean Code:</strong> Enforced Skinny Controller, Fat Model, and Service layer patterns for high maintainability.</li>
+                    </ul>
+                </div>
                 <div class="tech-stack">
-                    <span>Laravel</span><span>Design Patterns</span><span>Event-Driven</span><span>Security & Permissions</span>
+                    <span>Laravel</span><span>RBAC</span><span>Design Patterns</span><span>Localization</span>
                 </div>
             </div>
         </section>
 
         <section id="achievements">
-            <h2 class="section-title" data-aos="fade-up">Education & Achievements</h2>
+            <h2 class="section-title" data-aos="fade-up">Academic & Professional Journey</h2>
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-right">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Informatics Student (3rd Year)</h3>
-                    <p style="color: var(--primary); font-weight: bold; margin-bottom: 15px;">International University for Science and Technology (IUST) | June 2023 - Present</p>
-                    <p style="color: var(--text-muted);">In-depth academic study of computer science to establish a strong foundation in software development, including Assembly language, algorithms, and graph theory.</p>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="timeline-date">June 2023 - Present</span>
+                    <h3>Informatics Student (3rd Year)</h3>
+                    <p class="timeline-location">International University for Science and Technology (IUST)</p>
+                    <p class="timeline-desc">In-depth study of computer science fundamentals, including Assembly language, Microprocessor architecture (Intel 8086), CPU scheduling, and graph theory.</p>
                 </div>
-                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                    <span class="badge-score">Final Project Score: 95/100</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Backend Development Training (Laravel)</h3>
-                    <p style="color: var(--primary); font-weight: bold; margin-bottom: 15px;">Syrian Programmer Empowerment (Tamkeen) | March 1, 2026</p>
-                    <p style="color: var(--text-muted);">Completed 110 intensive training hours focused on advanced architectural building using Laravel, relational database design, and programming RESTful APIs.</p>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="timeline-date">March 2026</span>
+                    <span class="badge-score">Final Score: 95/100</span>
+                    <h3>Backend Development Graduate</h3>
+                    <p class="timeline-location">Syrian Programmer Empowerment (Tamkeen)</p>
+                    <p class="timeline-desc">Completed 110 hours of intensive architectural training. Mastered Laravel, relational database schema design, and secure RESTful API development.</p>
                 </div>
             </div>
         </section>
@@ -169,24 +166,15 @@
 
     <footer>
         <div class="social">
-            <a href="https://github.com/abedhamdi220" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/abdulrahman-al-hammadi-901b94384/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:hminabd71@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/abedhamdi220" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abdulrahman-al-hammadi-901b94384/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:hminabd71@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p style="color: var(--text-muted);">© 2026 Abdulrahman Al-Hammadi. Developer with passion, engineering, and a progressive mindset.</p>
+        <p class="footer-text">© 2026 Abdulrahman Al-Hammadi. Engineered with <span style="color: var(--primary);">passion</span> and clean code.</p>
     </footer>
 
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

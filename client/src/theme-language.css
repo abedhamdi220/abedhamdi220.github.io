@@ -1,0 +1,44 @@
+/*
+ * Design reminder — Living Systems Notebook:
+ * Dark mode is ink-on-charcoal with a quiet teal signal. Arabic is not mirrored
+ * mechanically: it gains a Cairo reading rhythm and a deliberately reversed record spine.
+ */
+
+.header-tools { display: flex; align-items: center; gap: 8px; }
+.utility-control { min-height: 35px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 9px; color: var(--ink-soft); background: color-mix(in srgb, var(--paper-bright) 74%, transparent); border: 1px solid var(--line); font: 10px/1 "IBM Plex Mono", monospace; letter-spacing: .02em; transition: color 170ms var(--ease-out), border-color 170ms var(--ease-out), background 170ms var(--ease-out), transform 170ms var(--ease-out); }
+.utility-control:hover { color: var(--teal); border-color: var(--teal); transform: translateY(-1px); }.utility-control:active { transform: scale(.97); }
+.language-control { min-width: 69px; }.theme-control { width: 35px; padding: 0; }
+
+html.dark {
+  --background: #0f1615; --foreground: #e9eee9; --card: #17201f; --card-foreground: #e9eee9;
+  --primary: #4eb4aa; --primary-foreground: #0f1615; --muted: #1a2624; --muted-foreground: #a3b1ab;
+  --border: #33433f; --ring: #78c8c0; --ink: #edf2ed; --ink-soft: #b6c2bc; --paper: #0f1615;
+  --paper-bright: #182220; --paper-deep: #14201e; --line: #344540; --teal: #61c7bc;
+  --teal-dark: #3da399; --blue-wash: #a7d7db;
+}
+.dark body { background: var(--paper); color: var(--ink); }.dark body::selection { background: var(--teal-dark); color: #fff; }
+.dark .site-header.is-scrolled { background: color-mix(in srgb, var(--paper) 93%, transparent); }.dark .hero-visual { box-shadow: 18px 22px 0 rgba(97, 199, 188, .13), 0 25px 55px rgba(0, 0, 0, .35); }
+.dark .hero-visual::after { background: linear-gradient(135deg, rgba(15, 22, 21, .06), rgba(0, 0, 0, .3)); }.dark .project-record:hover { background: rgba(97, 199, 188, .055); }
+.dark .hero-visual::before { border-color: rgba(97, 199, 188, .3); }
+.dark .tag-list span { color: #c8d5d0; background: rgba(97, 199, 188, .09); border-color: rgba(97, 199, 188, .24); }.dark .project-position, .dark .solution-label, .dark .hero-metadata dt, .dark .timeline-date { color: #9eada6; }
+.dark .skill-group { border-color: #354640; }.dark .capability-note { background: #091110; }.dark .site-footer { background: #091110; }.dark .header-cv, .dark .utility-control { background: #172220; }.dark .footer-brand .brand-mark-wrap { background: #e9eee9; }.dark .footer-brand .brand-mark-overlay { color: #0e766e; }
+.dark .contact-section { color: #edf2ed; background: #08110f; }.dark .contact-section .button-primary { color: #08110f; background: var(--blue-wash); border-color: var(--blue-wash); }.dark .contact-section .button-primary:hover { background: #edf2ed; border-color: #edf2ed; }
+.dark .project-record::before, .dark .timeline-point { background: var(--paper); }.dark .additional-diagram { color: #e9eee9; border-color: rgba(233, 238, 233, .55); }.dark .additional-diagram i { background: rgba(233, 238, 233, .45); }.dark .margin-monogram span { color: #a9b7b0; }
+
+.rtl { text-align: right; font-family: "Cairo", "DM Sans", sans-serif; }
+.rtl .brand, .rtl .brand-name, .rtl .tag-list, .rtl .project-stack-label, .rtl .project-id, .rtl .system-flow, .rtl .visual-flag, .rtl .additional-diagram, .rtl .capability-routes, .rtl .contact-details, .rtl .social-links { direction: ltr; }
+.rtl .section-kicker, .rtl .eyebrow, .rtl .project-type, .rtl .solution-label, .rtl .hero-metadata dt, .rtl .additional-number, .rtl .timeline-date, .rtl .institution { font-family: "IBM Plex Mono", "Cairo", monospace; letter-spacing: 0; }
+.rtl .main-nav { margin-left: 0; margin-right: auto; }.rtl .main-nav a::after { left: auto; right: 0; }.rtl .hero-index, .rtl .section-frame > .hero-index { left: auto; right: 0; }.rtl .hero-index i { margin-left: 0; margin-right: 4px; }
+.rtl .hero-metadata div { padding-right: 0; padding-left: 16px; }.rtl .hero-metadata div + div { padding-left: 0; padding-right: 16px; border-left: 0; border-right: 1px solid var(--line); }
+.rtl .project-stack::before { left: auto; right: 9px; }.rtl .project-record::before { left: auto; right: 5px; }.rtl .project-record-head { padding-left: 19px; padding-right: 35px; }.rtl .project-body { padding-left: 19px; padding-right: 35px; }.rtl .project-footer { padding-left: 19px; padding-right: 35px; }.rtl .project-id i { order: -1; }
+.rtl .work-section::after, .rtl .capabilities-section::after, .rtl .journey-section::after, .rtl .contact-section::after { left: auto; right: max(calc((100% - min(1360px, calc(100% - 48px))) / 2 + 19px), 43px); }.rtl .work-section::before, .rtl .capabilities-section::before, .rtl .journey-section::before, .rtl .contact-section::before { left: auto; right: max(calc((100% - min(1360px, calc(100% - 48px))) / 2 + 7px), 31px); }
+.rtl .capabilities-section, .rtl .contact-section { padding-left: max(calc((100% - min(1360px, calc(100% - 48px))) / 2), 24px); padding-right: max(calc((100% - min(1360px, calc(100% - 48px))) / 2 + 96px), 120px); }.rtl .capabilities-section .hero-index { left: auto; right: max(calc((100% - min(1360px, calc(100% - 48px))) / 2), 24px); }
+.rtl .timeline::before { left: auto; right: 144px; }.rtl .timeline-copy { padding-left: 0; padding-right: 25px; }.rtl .timeline-copy h3 span { margin-left: 0; margin-right: 7px; }.rtl .contact-actions { align-items: flex-end; }.rtl .contact-details a, .rtl .contact-details span { direction: rtl; }
+.rtl .button svg { transform: scaleX(-1); }.rtl .live-link:hover { transform: translateX(-3px); }
+
+@media (max-width: 900px) { .rtl .capabilities-section, .rtl .contact-section { padding-left: 17px; padding-right: 17px; }.rtl .timeline::before { left: auto; right: 110px; } }
+@media (max-width: 670px) {
+  .header-tools { gap: 5px; }.language-control { min-width: 0; padding: 0 7px; }.language-control span { display: none; }.rtl .header-cv { margin-left: 0; margin-right: auto; }
+  .rtl .project-stack::before { left: auto; right: 4px; }.rtl .project-record::before { left: auto; right: 0; }.rtl .project-record-head { padding-left: 0; padding-right: 26px; }.rtl .project-body { padding-left: 0; padding-right: 26px; }.rtl .project-footer { padding-left: 0; padding-right: 26px; }
+  .rtl .timeline::before { left: auto; right: 8px; }.rtl .timeline-point { grid-column: 1; }.rtl .timeline-copy { padding-right: 0; }.rtl .timeline-date { padding-right: 0; }
+}

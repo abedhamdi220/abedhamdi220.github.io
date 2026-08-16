@@ -1,0 +1,102 @@
+/*
+ * Design reminder — Living Systems Notebook:
+ * This layer joins every record through thin paths, status nodes, and a visible
+ * crossed-path A/H mark. Pale blue denotes AI/data only; teal remains the core signal.
+ */
+
+.brand-mark-wrap {
+  position: relative;
+  width: 62px;
+  height: 42px;
+  border-radius: 0;
+  border: 1px solid rgba(183, 214, 215, .55);
+}
+
+.brand-mark { width: 40px; height: 40px; opacity: .25; }
+.brand-mark-overlay {
+  position: absolute;
+  width: 52px;
+  height: 33px;
+  color: var(--blue-wash);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .25));
+}
+.system-mark { display: block; }
+
+.hero { grid-template-columns: minmax(0, .86fr) minmax(470px, 1.04fr); gap: clamp(52px, 8vw, 132px); }
+.hero-visual { border: 12px solid var(--paper-bright); outline: 1px solid var(--line); box-shadow: 18px 22px 0 rgba(14, 118, 110, .11), 0 25px 55px rgba(23, 32, 31, .13); }
+.hero-visual > img { object-position: center 36%; }.hero-visual::after { background: linear-gradient(135deg, rgba(245, 241, 232, .04), rgba(23, 32, 31, .1)); }
+.hero-caption { text-shadow: 0 1px 11px rgba(23, 32, 31, .48); }.visual-flag { border-left: 3px solid var(--blue-wash); }
+.hero h1 { max-width: 760px; letter-spacing: -.052em; line-height: .93; }
+.hero-visual::before { content: ""; position: absolute; z-index: 2; inset: 17px; pointer-events: none; opacity: .9; background: linear-gradient(90deg, transparent 17%, rgba(14, 118, 110, .52) 17.15%, transparent 17.4%) 0 19% / 100% 100% no-repeat, linear-gradient(0deg, transparent 54%, rgba(183, 214, 215, .8) 54.2%, transparent 54.55%) 0 0 / 100% 100% no-repeat; border: 1px solid rgba(14, 118, 110, .17); }
+.hero-visual .visual-routes { z-index: 3; }.hero-visual .visual-label, .hero-visual .visual-flag, .hero-visual .hero-caption { z-index: 4; }
+
+.visual-routes { position: absolute; inset: 0; z-index: 1; color: var(--teal); pointer-events: none; }
+.route { position: absolute; display: flex; align-items: center; gap: 6px; color: var(--teal); font: 8px/1 "IBM Plex Mono", monospace; letter-spacing: .04em; }
+.route::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 16%, transparent); }
+.route i { display: block; width: 60px; height: 1px; background: currentColor; opacity: .86; }
+.route-a { top: 25%; left: 24%; }.route-b { top: 57%; right: 3%; }.route-c { bottom: 20%; left: 12%; }.route-c i { width: 45px; }
+.data-route { color: #7ebcc3; }.route b { padding: 4px 5px; background: color-mix(in srgb, var(--paper-bright) 75%, transparent); font-weight: 500; }
+
+.intro-strip { grid-template-columns: minmax(0, 1.1fr) 110px minmax(330px, .8fr); gap: clamp(30px, 5vw, 80px); }
+.margin-monogram { align-self: center; display: flex; flex-direction: column; align-items: center; gap: 13px; color: var(--teal); }
+.margin-monogram::before, .margin-monogram::after { content: ""; width: 1px; height: 58px; background: var(--line); }
+.margin-monogram .system-mark { width: 52px; }
+.margin-monogram span { color: #78827d; font: 8px/1.4 "IBM Plex Mono", monospace; letter-spacing: .04em; text-align: center; text-transform: uppercase; }
+
+.project-stack { position: relative; }
+.project-stack::before { content: ""; position: absolute; top: 0; bottom: 0; left: 9px; width: 1px; background: linear-gradient(var(--teal), var(--line) 18%, var(--line) 82%, var(--teal)); }
+.project-record { position: relative; }
+.project-record::before { content: ""; position: absolute; z-index: 2; width: 9px; height: 9px; top: 24px; left: 5px; border-radius: 50%; background: var(--paper); border: 2px solid var(--teal); }
+.project-record:nth-child(2)::before { background: var(--blue-wash); border-color: #6caeb4; }
+.project-record-head { padding-left: 35px; }.project-body { padding-left: 35px; }.project-footer { padding-left: 35px; }
+.system-flow .data-step b { color: #397880; background: rgba(183, 214, 215, .4); padding: 4px 5px; border: 1px solid rgba(83, 157, 166, .35); }
+.system-flow .data-step i { color: #579ba3; }
+
+.work-section::after, .capabilities-section::after, .journey-section::after, .contact-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: max(calc((100% - min(1360px, calc(100% - 48px))) / 2 + 19px), 43px);
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(transparent, rgba(14, 118, 110, .48) 7%, var(--line) 35%, var(--line) 82%, transparent);
+}
+.work-section::after, .capabilities-section::after, .journey-section::after, .contact-section::after { background: radial-gradient(circle at 50% 10%, var(--teal) 0 2px, transparent 2.5px) center top / 1px 48px repeat-y, linear-gradient(transparent, rgba(14, 118, 110, .52) 7%, var(--line) 35%, var(--line) 82%, transparent); }
+.work-section::before, .capabilities-section::before, .journey-section::before, .contact-section::before {
+  content: "●  RECORD";
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  left: max(calc((100% - min(1360px, calc(100% - 48px))) / 2 + 7px), 31px);
+  color: var(--teal);
+  font: 8px/1 "IBM Plex Mono", monospace;
+  letter-spacing: .04em;
+  writing-mode: vertical-rl;
+}
+
+.additional-visual { position: relative; }
+.additional-diagram { position: absolute; inset: 13px; display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr auto; padding: 10px; color: var(--ink); border: 1px solid rgba(23, 32, 31, .45); font: 8px/1 "IBM Plex Mono", monospace; letter-spacing: .05em; }
+.additional-diagram::before { content: ""; width: 7px; height: 7px; align-self: end; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 4px rgba(14, 118, 110, .15); }
+.additional-diagram i { width: 1px; height: 100%; justify-self: end; background: rgba(23, 32, 31, .5); }
+.additional-diagram b { align-self: end; color: var(--teal); font-size: 15px; font-weight: 500; }.additional-diagram em { justify-self: end; align-self: end; color: #579ba3; font-size: 15px; font-style: normal; }
+
+.capability-note { position: relative; }.capability-routes { position: absolute; top: 22px; left: 18px; right: 18px; display: flex; align-items: center; gap: 7px; color: var(--blue-wash); font: 8px/1 "IBM Plex Mono", monospace; letter-spacing: .06em; }
+.capability-routes::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }.capability-routes i { width: 45px; height: 1px; background: currentColor; }.capability-routes .data-node { padding: 4px 5px; color: #b7dfe5; border: 1px solid rgba(183, 223, 229, .55); }
+.capability-note > div:last-child { padding: 23px; }.capability-note > div.capability-routes { padding: 0; }
+.capability-note::after { content: "METHOD / LAYERED FLOW"; position: absolute; right: 13px; bottom: 92px; color: var(--blue-wash); font: 8px/1 "IBM Plex Mono", monospace; letter-spacing: .06em; writing-mode: vertical-rl; }
+
+.footer-brand .brand-mark-wrap { background: var(--paper-bright); }.footer-brand .brand-mark-overlay { color: var(--teal); }
+.site-footer .footer-brand::after { content: "SYSTEM / ENDPOINT"; margin-left: 11px; color: var(--teal); font: 8px/1 "IBM Plex Mono", monospace; letter-spacing: .06em; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }.intro-strip { grid-template-columns: 1fr; }.margin-monogram { display: none; }
+  .work-section::after, .capabilities-section::after, .journey-section::after, .contact-section::after, .work-section::before, .capabilities-section::before, .journey-section::before, .contact-section::before { display: none; }
+}
+@media (max-width: 670px) {
+  .brand-mark-wrap { width: 46px; height: 34px; }.brand-mark { width: 31px; height: 31px; }.brand-mark-overlay { width: 39px; height: 25px; }
+  .hero-visual { border-width: 7px; box-shadow: 10px 14px 0 rgba(14, 118, 110, .1), 0 18px 40px rgba(23, 32, 31, .11); }
+  .site-footer .footer-brand::after { display: none; }
+  .route { font-size: 7px; }.route i { width: 33px; }
+  .project-stack::before { left: 4px; }.project-record::before { left: 0; }.project-record-head { padding-left: 26px; }.project-body { padding-left: 26px; }.project-footer { padding-left: 26px; }
+}

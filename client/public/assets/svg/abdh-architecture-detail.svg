@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Architectural connection detail</title>
+  <desc id="desc">Minimal architectural nodes joined by a translucent teal structural channel.</desc>
+  <defs>
+    <linearGradient id="wall" x1="104" y1="0" x2="1504" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1EFE8"/>
+      <stop offset="1" stop-color="#D8D7D0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="430" y1="740" x2="1248" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00665F"/>
+      <stop offset=".48" stop-color="#0FA89D"/>
+      <stop offset="1" stop-color="#084944"/>
+    </linearGradient>
+    <filter id="float" x="400" y="58" width="1100" height="1080" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#222522" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#wall)"/>
+  <g opacity=".18" stroke="#566D69" stroke-width="2">
+    <path d="M0 142H560M0 222H724M0 302H418"/>
+    <path d="M154 0V628M244 0V510M336 0V354"/>
+  </g>
+  <g filter="url(#float)">
+    <path d="M464 855L551 772L852 627L1302 250" stroke="#1E2423" stroke-width="84" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M464 855L551 772L852 627L1302 250" stroke="url(#glass)" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M580 840L684 833L742 756L838 752L900 663" stroke="#9BE3DB" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#float)">
+    <g transform="translate(275 760)">
+      <path d="M66 10H214L270 66V184L214 240H66L10 184V66L66 10Z" fill="#242827"/>
+      <path d="M66 0H214L270 56V174L214 230H66L10 174V56L66 0Z" fill="#ECE5D6"/>
+      <path d="M105 44H180L215 80V145L180 181H105L70 145V80L105 44Z" fill="#F6F2E9"/>
+      <path d="M126 64H164L184 85V140L164 161H126L106 140V85L126 64Z" fill="url(#glass)"/>
+    </g>
+    <g transform="translate(774 500)">
+      <path d="M70 8H228L286 66V192L228 250H70L12 192V66L70 8Z" fill="#242827"/>
+      <path d="M70 0H228L286 58V184L228 242H70L12 184V58L70 0Z" fill="#ECE5D6"/>
+      <path d="M109 49H189L226 86V156L189 193H109L72 156V86L109 49Z" fill="#F8F4E9"/>
+      <path d="M132 71H168L192 94V148L168 171H132L108 148V94L132 71Z" fill="url(#glass)"/>
+    </g>
+    <g transform="translate(1160 130)">
+      <circle cx="118" cy="118" r="118" fill="#252827"/>
+      <circle cx="118" cy="106" r="106" fill="#EDE6D7"/>
+      <path d="M118 40A66 66 0 1 0 184 106H146A28 28 0 1 1 118 78V40Z" fill="#F8F4E9"/>
+      <path d="M111 108H155L136 130H111V108Z" fill="url(#glass)"/>
+    </g>
+  </g>
+</svg>

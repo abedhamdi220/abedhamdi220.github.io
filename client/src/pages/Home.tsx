@@ -16,10 +16,12 @@ const cvUrl = `${import.meta.env.BASE_URL}cv/Abdulrahman_AlHammadi_CV.pdf`;
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
 
-const heroImage = asset("abdh-editorial-svg-portrait.png");
-const corridorImage = asset("abdh-system-corridor.png");
-const detailImage = asset("abdh-architecture-detail.png");
-const logoImage = asset("abdh-logo-mark.png");
+const heroImage640 = asset("images/abdh-portrait-640w.webp");
+const heroImage960 = asset("images/abdh-portrait-960w.webp");
+const heroImage1280 = asset("images/abdh-portrait-1280w.webp");
+const corridorImage = asset("svg/abdh-system-corridor.svg");
+const detailImage = asset("svg/abdh-architecture-detail.svg");
+const logoImage = asset("svg/abdh-logo-mark.svg");
 const skillIcons = [Server, Workflow, Database, Braces];
 type SkillGroup = readonly [string, readonly string[]];
 type JourneyItem = { date: string; title: string; badge: string; institution: string; detail: string };
@@ -91,7 +93,7 @@ export default function Home() {
             <dl className="hero-metadata">{copy.hero.metadata.map(([term, first, second]) => <div key={term}><dt>{term}</dt><dd>{first}<br />{second}</dd></div>)}</dl>
           </div>
           <div className="hero-visual" aria-label="Editorial profile with engineering data routes">
-            <div className="visual-flag"><span>{copy.hero.profile}</span><b>2026</b></div><img src={heroImage} alt="Abdulrahman Al-Hammadi editorial profile" />
+            <div className="visual-flag"><span>{copy.hero.profile}</span><b>2026</b></div><picture><source media="(max-width: 640px)" srcSet={heroImage640} /><source media="(max-width: 1024px)" srcSet={heroImage960} /><img src={heroImage1280} alt="Abdulrahman Al-Hammadi editorial profile" width={1280} height={1600} fetchPriority="high" decoding="async" /></picture>
             <div className="visual-routes" aria-hidden="true"><span className="route route-a"><i /><b>REQ / 01</b></span><span className="route route-b"><i /><b>QUEUE / 02</b></span><span className="route route-c data-route"><i /><b>DATA / AI</b></span></div>
             <div className="visual-label visual-label-a">{copy.hero.profileLabel}<br /><b>{copy.hero.profileValue}</b></div><div className="visual-label visual-label-b">{copy.hero.focusLabel}<br /><b>{copy.hero.focusValue}</b></div><div className="hero-caption"><span>{copy.hero.principle}</span><p>{copy.hero.principleText}</p></div>
           </div>
